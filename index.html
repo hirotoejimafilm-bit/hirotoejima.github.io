@@ -29,9 +29,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav {
       position: fixed;
@@ -72,9 +70,7 @@
     }
 
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -148,9 +144,7 @@
     }
 
 
-    /* =========================
-       SECTIONS
-    ========================= */
+    /* SECTIONS */
 
     section {
       padding: 120px 7%;
@@ -172,13 +166,15 @@
     }
 
 
-    /* =========================
-       FILM MUSIC
-    ========================= */
+    /* FILM PROJECT */
 
     .film-project {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 0 auto 120px;
+    }
+
+    .film-project:last-child {
+      margin-bottom: 0;
     }
 
     .film-project-header {
@@ -207,9 +203,7 @@
     }
 
 
-    /* =========================
-       VIDEO
-    ========================= */
+    /* VIDEO */
 
     .video-container {
       width: 100%;
@@ -237,9 +231,7 @@
     }
 
 
-    /* =========================
-       PROJECT INFORMATION
-    ========================= */
+    /* PROJECT INFORMATION */
 
     .project-grid {
       display: grid;
@@ -274,32 +266,25 @@
     }
 
 
-    /* =========================
-       AUDIO
-    ========================= */
+    /* AUDIO */
 
     .audio-player {
       width: 100%;
-
       margin-top: 20px;
     }
 
-    .audio-placeholder {
-      padding: 18px;
+    audio {
+      width: 100%;
+    }
 
-      border: 1px dashed rgba(255,255,255,0.18);
-
-      border-radius: 12px;
-
+    .audio-note {
       color: #777;
-
-      font-size: 14px;
+      font-size: 13px;
+      margin-top: 12px;
     }
 
 
-    /* =========================
-       ABOUT
-    ========================= */
+    /* ABOUT */
 
     .about-content {
       max-width: 850px;
@@ -314,9 +299,7 @@
     }
 
 
-    /* =========================
-       CONTACT
-    ========================= */
+    /* CONTACT */
 
     .contact-box {
       max-width: 850px;
@@ -335,9 +318,7 @@
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       padding: 40px 7%;
@@ -358,9 +339,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -393,6 +372,7 @@
       .film-project-category {
         margin-top: 15px;
       }
+
     }
 
   </style>
@@ -402,9 +382,7 @@
 <body>
 
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -432,9 +410,7 @@
 
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <header class="hero">
 
@@ -471,9 +447,7 @@
 
 
 
-  <!-- =========================
-       WORKS
-  ========================= -->
+  <!-- WORKS -->
 
   <section id="works">
 
@@ -487,12 +461,11 @@
 
 
 
-    <!-- =========================
-         RESET
-    ========================= -->
+    <!-- ==================================
+         PROJECT 01 — RESET
+    ================================== -->
 
     <article class="film-project">
-
 
       <div class="film-project-header">
 
@@ -512,7 +485,7 @@
 
 
 
-      <!-- FILM VIDEO -->
+      <!-- FILM -->
 
       <div class="video-container">
 
@@ -527,12 +500,10 @@
 
 
 
-      <!-- PROJECT INFORMATION -->
+      <!-- RESET INFO -->
 
       <div class="project-grid">
 
-
-        <!-- ROLE -->
 
         <div class="project-card">
 
@@ -549,18 +520,16 @@
         </div>
 
 
-
-        <!-- MUSIC -->
-
         <div class="project-card">
 
           <h3>
-            Music
+            Project
           </h3>
 
-          <div class="audio-placeholder">
-            Original score audio will be added here.
-          </div>
+          <p>
+            Student short film created through a
+            Sony Pictures–affiliated high school film program.
+          </p>
 
         </div>
 
@@ -569,7 +538,7 @@
 
 
 
-      <!-- PROJECT DESCRIPTION -->
+      <!-- RESET DESCRIPTION -->
 
       <div
         class="project-card"
@@ -581,24 +550,135 @@
         </h3>
 
         <p>
-          RESET is a student short film created through a
-          Sony Pictures–affiliated high school film program.
-          I composed the original score to support the film's
-          atmosphere, narrative, and emotional development.
+          Original music composed for RESET, developed to
+          support the film's atmosphere, narrative, and
+          emotional progression.
         </p>
 
       </div>
 
+    </article>
+
+
+
+    <!-- ==================================
+         PROJECT 02 — SF ORCHESTRA
+    ================================== -->
+
+    <article class="film-project">
+
+      <div class="film-project-header">
+
+        <div>
+
+          <h3 class="film-project-title">
+            SF Orchestra
+          </h3>
+
+        </div>
+
+        <div class="film-project-category">
+          Original Cinematic Music
+        </div>
+
+      </div>
+
+
+
+      <!-- AUDIO -->
+
+      <div class="project-card">
+
+        <h3>
+          Listen
+        </h3>
+
+        <audio
+          class="audio-player"
+          controls
+          preload="metadata">
+
+          <source
+            src="SF orchestra 完成１ - 7_6_26, 16.21.m4a"
+            type="audio/mp4">
+
+          Your browser does not support the audio player.
+
+        </audio>
+
+        <div class="audio-note">
+          Original orchestral composition.
+        </div>
+
+      </div>
+
+
+
+      <!-- SF ORCHESTRA INFO -->
+
+      <div class="project-grid">
+
+
+        <div class="project-card">
+
+          <h3>
+            Concept
+          </h3>
+
+          <p>
+            An original orchestral composition inspired by
+            the cinematic sound and epic atmosphere of
+            science-fiction films.
+          </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <h3>
+            Focus
+          </h3>
+
+          <p>
+            Large-scale orchestration, dramatic development,
+            thematic writing, and cinematic world-building.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- SF ORCHESTRA DESCRIPTION -->
+
+      <div
+        class="project-card"
+        style="margin-top: 30px;"
+      >
+
+        <h3>
+          About the Music
+        </h3>
+
+        <p>
+          Created as an exploration of cinematic orchestration,
+          drawing inspiration from the musical world of
+          Star Wars while developing an original musical identity.
+        </p>
+
+      </div>
 
     </article>
+
 
   </section>
 
 
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -634,9 +714,7 @@
 
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+  <!-- CONTACT -->
 
   <section id="contact">
 
@@ -664,9 +742,7 @@
 
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
