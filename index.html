@@ -29,26 +29,19 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
-
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 72px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       padding: 0 7%;
-
       background: rgba(8, 8, 12, 0.82);
       backdrop-filter: blur(16px);
-
       border-bottom: 1px solid rgba(255,255,255,0.08);
-
       z-index: 1000;
     }
 
@@ -69,17 +62,11 @@
       color: #fff;
     }
 
-
-    /* HERO */
-
     .hero {
       min-height: 100vh;
-
       display: flex;
       align-items: center;
-
       padding: 120px 7% 80px;
-
       background:
         radial-gradient(
           circle at 75% 30%,
@@ -127,14 +114,10 @@
 
     .button {
       display: inline-block;
-
       padding: 13px 22px;
-
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 999px;
-
       font-size: 14px;
-
       transition: 0.25s ease;
     }
 
@@ -142,9 +125,6 @@
       background: #fff;
       color: #08080c;
     }
-
-
-    /* SECTIONS */
 
     section {
       padding: 120px 7%;
@@ -165,9 +145,6 @@
       margin-bottom: 70px;
     }
 
-
-    /* FILM PROJECT */
-
     .film-project {
       max-width: 1100px;
       margin: 0 auto 120px;
@@ -181,11 +158,8 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-
       gap: 30px;
-
       margin-bottom: 35px;
-
       flex-wrap: wrap;
     }
 
@@ -202,79 +176,50 @@
       text-transform: uppercase;
     }
 
-
-    /* VIDEO */
-
     .video-container {
       width: 100%;
-
       aspect-ratio: 16 / 9;
-
       background: #111117;
-
       border: 1px solid rgba(255,255,255,0.09);
-
       border-radius: 18px;
-
       overflow: hidden;
-
       margin-bottom: 30px;
     }
 
     .video-container iframe {
       width: 100%;
       height: 100%;
-
       display: block;
-
       border: 0;
     }
 
-
-    /* PROJECT INFORMATION */
-
     .project-grid {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 30px;
-
       margin-top: 30px;
     }
 
     .project-card {
       background: #101016;
-
       border: 1px solid rgba(255,255,255,0.08);
-
       border-radius: 18px;
-
       padding: 30px;
     }
 
     .project-card h3 {
       font-size: 18px;
-
       margin-bottom: 12px;
     }
 
     .project-card p {
       color: #aaa;
-
       font-size: 15px;
-    }
-
-
-    /* AUDIO */
-
-    .audio-player {
-      width: 100%;
-      margin-top: 20px;
     }
 
     audio {
       width: 100%;
+      margin-top: 15px;
     }
 
     .audio-note {
@@ -283,14 +228,9 @@
       margin-top: 12px;
     }
 
-
-    /* ABOUT */
-
     .about-content {
       max-width: 850px;
-
       color: #aaa;
-
       font-size: 20px;
     }
 
@@ -298,18 +238,13 @@
       margin-top: 25px;
     }
 
-
-    /* CONTACT */
-
     .contact-box {
       max-width: 850px;
     }
 
     .contact-email {
       font-size: clamp(28px, 5vw, 60px);
-
       letter-spacing: -0.05em;
-
       word-break: break-word;
     }
 
@@ -317,29 +252,16 @@
       opacity: 0.65;
     }
 
-
-    /* FOOTER */
-
     footer {
       padding: 40px 7%;
-
       border-top: 1px solid rgba(255,255,255,0.08);
-
       color: #666;
-
       font-size: 13px;
-
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
-
       flex-wrap: wrap;
     }
-
-
-    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -372,15 +294,11 @@
       .film-project-category {
         margin-top: 15px;
       }
-
     }
-
   </style>
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
@@ -391,23 +309,12 @@
     </a>
 
     <div class="nav-links">
-
-      <a href="#works">
-        Works
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#works">Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
 
   </nav>
-
 
 
   <!-- HERO -->
@@ -446,7 +353,6 @@
   </header>
 
 
-
   <!-- WORKS -->
 
   <section id="works">
@@ -460,10 +366,7 @@
     </h2>
 
 
-
-    <!-- ==================================
-         PROJECT 01 — RESET
-    ================================== -->
+    <!-- RESET -->
 
     <article class="film-project">
 
@@ -484,8 +387,7 @@
       </div>
 
 
-
-      <!-- FILM -->
+      <!-- RESET VIDEO -->
 
       <div class="video-container">
 
@@ -499,11 +401,9 @@
       </div>
 
 
-
-      <!-- RESET INFO -->
+      <!-- RESET INFORMATION -->
 
       <div class="project-grid">
-
 
         <div class="project-card">
 
@@ -533,12 +433,8 @@
 
         </div>
 
-
       </div>
 
-
-
-      <!-- RESET DESCRIPTION -->
 
       <div
         class="project-card"
@@ -561,9 +457,7 @@
 
 
 
-    <!-- ==================================
-         PROJECT 02 — SF ORCHESTRA
-    ================================== -->
+    <!-- SF ORCHESTRA -->
 
     <article class="film-project">
 
@@ -584,8 +478,7 @@
       </div>
 
 
-
-      <!-- AUDIO -->
+      <!-- AUDIO PLAYER -->
 
       <div class="project-card">
 
@@ -594,12 +487,11 @@
         </h3>
 
         <audio
-          class="audio-player"
           controls
           preload="metadata">
 
           <source
-            src="SF orchestra 完成１ - 7_6_26, 16.21.m4a"
+            src="./sf-orchestra.m4a"
             type="audio/mp4">
 
           Your browser does not support the audio player.
@@ -613,11 +505,9 @@
       </div>
 
 
-
-      <!-- SF ORCHESTRA INFO -->
+      <!-- SF ORCHESTRA INFORMATION -->
 
       <div class="project-grid">
-
 
         <div class="project-card">
 
@@ -647,12 +537,8 @@
 
         </div>
 
-
       </div>
 
-
-
-      <!-- SF ORCHESTRA DESCRIPTION -->
 
       <div
         class="project-card"
@@ -673,9 +559,7 @@
 
     </article>
 
-
   </section>
-
 
 
   <!-- ABOUT -->
@@ -689,7 +573,6 @@
     <h2>
       About
     </h2>
-
 
     <div class="about-content">
 
@@ -713,7 +596,6 @@
   </section>
 
 
-
   <!-- CONTACT -->
 
   <section id="contact">
@@ -725,7 +607,6 @@
     <h2>
       Let's Work Together
     </h2>
-
 
     <div class="contact-box">
 
@@ -741,7 +622,6 @@
   </section>
 
 
-
   <!-- FOOTER -->
 
   <footer>
@@ -755,7 +635,6 @@
     </div>
 
   </footer>
-
 
 </body>
 </html>
