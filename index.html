@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hiroto Ejima — Immersive Audio</title>
-  <meta name="description" content="Hiroto Ejima — Immersive Audio, Spatial Audio, Music Production and Music Direction.">
+  <title>Hiroto Ejima | Film Music & Audio</title>
 
   <style>
     * {
@@ -19,9 +18,9 @@
     }
 
     body {
-      background: #070709;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #08080c;
       color: #f5f5f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       line-height: 1.6;
     }
 
@@ -31,107 +30,73 @@
     }
 
     /* NAVIGATION */
-
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 70px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 6%;
-      background: rgba(7, 7, 9, 0.75);
-      backdrop-filter: blur(14px);
+      padding: 0 7%;
+      background: rgba(8, 8, 12, 0.82);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       z-index: 1000;
     }
 
     .logo {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: -0.04em;
     }
 
     .nav-links {
       display: flex;
       gap: 28px;
       font-size: 14px;
-      color: #b8b8c0;
-    }
-
-    .nav-links a {
-      transition: color 0.2s ease;
+      color: #aaa;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #fff;
     }
 
     /* HERO */
-
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 8% 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(
-        circle,
-        rgba(90, 70, 255, 0.18),
-        rgba(20, 160, 255, 0.08),
-        transparent 65%
-      );
-      top: -250px;
-      right: -200px;
-      pointer-events: none;
+      padding: 120px 7% 80px;
+      background:
+        radial-gradient(circle at 75% 30%, rgba(100, 80, 255, 0.14), transparent 35%),
+        radial-gradient(circle at 20% 70%, rgba(0, 180, 255, 0.08), transparent 35%);
     }
 
     .hero-content {
-      max-width: 1000px;
-      position: relative;
-      z-index: 2;
+      max-width: 900px;
     }
 
-    .eyebrow {
-      color: #8e8e9a;
+    .hero-label {
+      color: #999;
+      font-size: 14px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: clamp(55px, 9vw, 120px);
-      line-height: 0.95;
-      letter-spacing: -5px;
-      margin-bottom: 28px;
+    .hero h1 {
+      font-size: clamp(56px, 10vw, 130px);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+      margin-bottom: 30px;
     }
 
-    .gradient-text {
-      background: linear-gradient(
-        100deg,
-        #ffffff,
-        #b8b5ff,
-        #8de7ff
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-description {
-      max-width: 650px;
-      font-size: 20px;
-      color: #aaaab4;
+    .hero-subtitle {
+      font-size: clamp(20px, 3vw, 34px);
+      color: #bbb;
+      max-width: 800px;
       margin-bottom: 40px;
     }
 
@@ -142,179 +107,167 @@
     }
 
     .button {
+      display: inline-block;
       padding: 13px 22px;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
       font-size: 14px;
-      transition: all 0.25s ease;
+      transition: 0.25s ease;
     }
 
     .button:hover {
-      background: rgba(255,255,255,0.12);
-      transform: translateY(-2px);
-    }
-
-    .button.primary {
-      background: white;
-      color: black;
-      border-color: white;
-    }
-
-    .button.primary:hover {
-      background: #dddddd;
+      background: #fff;
+      color: #08080c;
     }
 
     /* SECTIONS */
-
     section {
-      padding: 120px 8%;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 120px 7%;
     }
 
     .section-label {
-      font-size: 12px;
-      color: #777783;
-      letter-spacing: 3px;
+      color: #777;
+      font-size: 13px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
-    h2 {
-      font-size: clamp(35px, 5vw, 65px);
-      letter-spacing: -2px;
-      margin-bottom: 55px;
+    section h2 {
+      font-size: clamp(38px, 6vw, 72px);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      margin-bottom: 70px;
     }
 
-    /* WORKS */
-
-    .works-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+    /* FILM MUSIC */
+    .film-project {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0;
     }
 
-    .work-card {
-      min-height: 280px;
+    .film-project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .film-project-title {
+      font-size: clamp(42px, 7vw, 82px);
+      letter-spacing: -0.06em;
+      line-height: 0.95;
+    }
+
+    .film-project-category {
+      color: #999;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* VIDEO */
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111117;
       border: 1px solid rgba(255,255,255,0.09);
       border-radius: 18px;
-      padding: 32px;
-      background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.06),
-        rgba(255,255,255,0.015)
-      );
-      transition: transform 0.3s ease, border-color 0.3s ease;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 30px;
     }
 
-    .work-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(150,150,255,0.35);
+    .video-placeholder span {
+      max-width: 500px;
     }
 
-    .work-number {
-      font-size: 12px;
-      color: #777783;
-      letter-spacing: 2px;
+    /* PROJECT INFO */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
     }
 
-    .work-card h3 {
-      font-size: 28px;
-      margin-top: 50px;
-      margin-bottom: 10px;
+    .project-card {
+      background: #101016;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 30px;
     }
 
-    .work-card p {
-      color: #9999a3;
+    .project-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #aaa;
       font-size: 15px;
     }
 
-    .work-type {
-      margin-top: 25px;
-      color: #c4c4cc;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    /* AUDIO */
+    .audio-player {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .audio-placeholder {
+      padding: 18px;
+      border: 1px dashed rgba(255,255,255,0.18);
+      border-radius: 12px;
+      color: #777;
+      font-size: 14px;
     }
 
     /* ABOUT */
-
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      max-width: 1100px;
+    .about-content {
+      max-width: 850px;
+      color: #aaa;
+      font-size: 20px;
     }
 
-    .about-container p {
-      color: #aaaab4;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-content: flex-start;
-    }
-
-    .skill {
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 10px 15px;
-      border-radius: 30px;
-      color: #bdbdc6;
-      font-size: 13px;
-      background: rgba(255,255,255,0.03);
+    .about-content p + p {
+      margin-top: 25px;
     }
 
     /* CONTACT */
-
     .contact-box {
-      max-width: 900px;
-    }
-
-    .contact-box h2 {
-      margin-bottom: 25px;
-    }
-
-    .contact-box p {
-      color: #9999a3;
-      font-size: 18px;
-      max-width: 650px;
-      margin-bottom: 35px;
+      max-width: 850px;
     }
 
     .contact-email {
-      display: inline-block;
-      font-size: clamp(20px, 4vw, 38px);
-      border-bottom: 1px solid #555;
-      padding-bottom: 8px;
-      transition: border-color 0.2s ease;
+      font-size: clamp(28px, 5vw, 60px);
+      letter-spacing: -0.05em;
+      word-break: break-word;
     }
 
     .contact-email:hover {
-      border-color: white;
+      opacity: 0.65;
     }
 
     /* FOOTER */
-
     footer {
-      padding: 35px 8%;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 7%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #666;
+      font-size: 13px;
       display: flex;
       justify-content: space-between;
-      color: #666670;
-      font-size: 12px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     /* MOBILE */
-
-    @media (max-width: 750px) {
-
+    @media (max-width: 700px) {
       nav {
         padding: 0 5%;
       }
@@ -324,31 +277,25 @@
         font-size: 12px;
       }
 
-      .hero {
-        padding-left: 6%;
-        padding-right: 6%;
-      }
-
       section {
-        padding: 90px 6%;
+        padding: 90px 5%;
       }
 
-      .works-grid {
+      .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .project-grid {
         grid-template-columns: 1fr;
       }
 
-      .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
+      .film-project-header {
+        display: block;
       }
 
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 10px;
+      .film-project-category {
+        margin-top: 15px;
       }
     }
   </style>
@@ -357,9 +304,8 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <nav>
-    <div class="logo">HE</div>
+    <a href="#" class="logo">HE</a>
 
     <div class="nav-links">
       <a href="#works">Works</a>
@@ -370,221 +316,159 @@
 
 
   <!-- HERO -->
-
   <header class="hero">
-
     <div class="hero-content">
 
-      <div class="eyebrow">
-        Immersive Audio / Spatial Audio / Music
+      <div class="hero-label">
+        Composer / Audio Creator
       </div>
 
       <h1>
         HIROTO<br>
-        <span class="gradient-text">EJIMA</span>
+        EJIMA
       </h1>
 
-      <p class="hero-description">
-        Exploring how sound can exist beyond the left and right.
-        Focused on immersive audio, spatial audio, music production,
-        and new ways of experiencing sound.
-      </p>
+      <div class="hero-subtitle">
+        Film Music / Music Direction / Spatial Audio
+      </div>
 
       <div class="hero-buttons">
-        <a class="button primary" href="#works">
+        <a href="#works" class="button">
           Explore Works
         </a>
 
-        <a class="button" href="#contact">
+        <a href="#contact" class="button">
           Contact
         </a>
       </div>
 
     </div>
-
   </header>
 
 
   <!-- WORKS -->
-
   <section id="works">
 
     <div class="section-label">
-      01 / Selected Works
+      01 — Film Music
     </div>
 
-    <h2>Selected Works</h2>
-
-    <div class="works-grid">
-
-      <a class="work-card" href="#" target="_blank">
-
-        <div class="work-number">
-          001
-        </div>
-
-        <div>
-          <h3>Spatial Audio</h3>
-
-          <p>
-            An exploration of immersive sound and three-dimensional
-            audio using spatial placement techniques.
-          </p>
-
-          <div class="work-type">
-            Immersive Audio
-          </div>
-        </div>
-
-      </a>
+    <h2>
+      Film Music
+    </h2>
 
 
-      <a class="work-card" href="#" target="_blank">
+    <!-- RESET -->
+    <article class="film-project">
 
-        <div class="work-number">
-          002
-        </div>
+      <div class="film-project-header">
 
         <div>
-          <h3>Film Music</h3>
-
-          <p>
-            Original music created for visual storytelling,
-            atmosphere, tension, and emotional development.
-          </p>
-
-          <div class="work-type">
-            Composition
-          </div>
+          <h3 class="film-project-title">
+            RESET
+          </h3>
         </div>
 
-      </a>
-
-
-      <a class="work-card" href="#" target="_blank">
-
-        <div class="work-number">
-          003
+        <div class="film-project-category">
+          Film Music
         </div>
 
-        <div>
-          <h3>Music Direction</h3>
+      </div>
+
+
+      <!-- VIDEO -->
+      <div class="video-placeholder">
+        <span>
+          Film video will be added here.
+          <br><br>
+          You can replace this area with an embedded
+          YouTube video when the video is available.
+        </span>
+      </div>
+
+
+      <!-- PROJECT INFORMATION -->
+      <div class="project-grid">
+
+        <div class="project-card">
+
+          <h3>
+            My Role
+          </h3>
 
           <p>
-            Developing musical concepts and shaping how music
-            interacts with visual media.
-          </p>
-
-          <div class="work-type">
+            Original Film Music<br>
+            Background Score<br>
             Music Direction
-          </div>
-        </div>
-
-      </a>
-
-
-      <a class="work-card" href="#" target="_blank">
-
-        <div class="work-number">
-          004
-        </div>
-
-        <div>
-          <h3>Experiments</h3>
-
-          <p>
-            Independent experiments exploring sound, technology,
-            spatial perception, and new audio experiences.
           </p>
 
-          <div class="work-type">
-            Audio Research
-          </div>
         </div>
 
-      </a>
 
-    </div>
+        <div class="project-card">
+
+          <h3>
+            Music
+          </h3>
+
+          <div class="audio-placeholder">
+            Audio player will be added here.
+            Replace this area with your music file.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- DESCRIPTION -->
+      <div class="project-card" style="margin-top: 30px;">
+
+        <h3>
+          About the Music
+        </h3>
+
+        <p>
+          Original music created for RESET.
+          The score was developed to support the film's
+          atmosphere, emotional progression, and narrative
+          through music.
+        </p>
+
+      </div>
+
+    </article>
 
   </section>
 
 
   <!-- ABOUT -->
-
   <section id="about">
 
     <div class="section-label">
-      02 / About
+      02 — About
     </div>
 
-    <h2>About</h2>
+    <h2>
+      About
+    </h2>
 
-    <div class="about-container">
+    <div class="about-content">
 
-      <div>
+      <p>
+        Hiroto Ejima is a Japanese composer and audio creator
+        based in the United States.
+      </p>
 
-        <p>
-          I am Hiroto Ejima, a Japanese student and audio creator
-          based in the United States.
-        </p>
+      <p>
+        His work focuses on film music, music direction,
+        spatial audio, and new approaches to sound and music.
+      </p>
 
-        <p>
-          My primary interest is immersive and spatial audio —
-          exploring how sound can be positioned, experienced,
-          and designed in three-dimensional space.
-        </p>
-
-        <p>
-          I also work with music composition, music direction,
-          and audio production for visual projects.
-        </p>
-
-      </div>
-
-
-      <div class="skills">
-
-        <div class="skill">
-          Immersive Audio
-        </div>
-
-        <div class="skill">
-          Spatial Audio
-        </div>
-
-        <div class="skill">
-          Music Production
-        </div>
-
-        <div class="skill">
-          Music Direction
-        </div>
-
-        <div class="skill">
-          Film Music
-        </div>
-
-        <div class="skill">
-          Logic Pro
-        </div>
-
-        <div class="skill">
-          GarageBand
-        </div>
-
-        <div class="skill">
-          Soundtrap
-        </div>
-
-        <div class="skill">
-          Japanese
-        </div>
-
-        <div class="skill">
-          English
-        </div>
-
-      </div>
+      <p>
+        Alongside composing, he explores immersive and spatial
+        audio technologies to create new ways of experiencing sound.
+      </p>
 
     </div>
 
@@ -592,22 +476,17 @@
 
 
   <!-- CONTACT -->
-
   <section id="contact">
 
     <div class="section-label">
-      03 / Contact
+      03 — Contact
     </div>
 
+    <h2>
+      Let's Work Together
+    </h2>
+
     <div class="contact-box">
-
-      <h2>Let's create<br>something new.</h2>
-
-      <p>
-        For collaborations, music, immersive audio,
-        spatial audio projects, or other audio-related work,
-        feel free to get in touch.
-      </p>
 
       <a
         class="contact-email"
@@ -622,7 +501,6 @@
 
 
   <!-- FOOTER -->
-
   <footer>
 
     <div>
@@ -630,7 +508,7 @@
     </div>
 
     <div>
-      Immersive Audio / Spatial Audio
+      Film Music / Audio / Spatial Sound
     </div>
 
   </footer>
