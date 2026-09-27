@@ -29,20 +29,28 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 72px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 0 7%;
+
       background: rgba(8, 8, 12, 0.82);
       backdrop-filter: blur(16px);
+
       border-bottom: 1px solid rgba(255,255,255,0.08);
+
       z-index: 1000;
     }
 
@@ -63,15 +71,30 @@
       color: #fff;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: 100vh;
+
       display: flex;
       align-items: center;
+
       padding: 120px 7% 80px;
+
       background:
-        radial-gradient(circle at 75% 30%, rgba(100, 80, 255, 0.14), transparent 35%),
-        radial-gradient(circle at 20% 70%, rgba(0, 180, 255, 0.08), transparent 35%);
+        radial-gradient(
+          circle at 75% 30%,
+          rgba(100, 80, 255, 0.14),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 20% 70%,
+          rgba(0, 180, 255, 0.08),
+          transparent 35%
+        );
     }
 
     .hero-content {
@@ -108,10 +131,14 @@
 
     .button {
       display: inline-block;
+
       padding: 13px 22px;
+
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 999px;
+
       font-size: 14px;
+
       transition: 0.25s ease;
     }
 
@@ -120,7 +147,11 @@
       color: #08080c;
     }
 
-    /* SECTIONS */
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
     section {
       padding: 120px 7%;
     }
@@ -140,19 +171,25 @@
       margin-bottom: 70px;
     }
 
-    /* FILM MUSIC */
+
+    /* =========================
+       FILM MUSIC
+    ========================= */
+
     .film-project {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0;
     }
 
     .film-project-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
       gap: 30px;
+
       margin-bottom: 35px;
+
       flex-wrap: wrap;
     }
 
@@ -169,69 +206,106 @@
       text-transform: uppercase;
     }
 
-    /* VIDEO */
-    .video-placeholder {
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    .video-container {
       width: 100%;
+
       aspect-ratio: 16 / 9;
+
       background: #111117;
+
       border: 1px solid rgba(255,255,255,0.09);
+
       border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      text-align: center;
-      padding: 30px;
+
+      overflow: hidden;
+
       margin-bottom: 30px;
     }
 
-    .video-placeholder span {
-      max-width: 500px;
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      border: 0;
     }
 
-    /* PROJECT INFO */
+
+    /* =========================
+       PROJECT INFORMATION
+    ========================= */
+
     .project-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 30px;
+
       margin-top: 30px;
     }
 
     .project-card {
       background: #101016;
+
       border: 1px solid rgba(255,255,255,0.08);
+
       border-radius: 18px;
+
       padding: 30px;
     }
 
     .project-card h3 {
       font-size: 18px;
+
       margin-bottom: 12px;
     }
 
     .project-card p {
       color: #aaa;
+
       font-size: 15px;
     }
 
-    /* AUDIO */
+
+    /* =========================
+       AUDIO
+    ========================= */
+
     .audio-player {
-      margin-top: 20px;
       width: 100%;
+
+      margin-top: 20px;
     }
 
     .audio-placeholder {
       padding: 18px;
+
       border: 1px dashed rgba(255,255,255,0.18);
+
       border-radius: 12px;
+
       color: #777;
+
       font-size: 14px;
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about-content {
       max-width: 850px;
+
       color: #aaa;
+
       font-size: 20px;
     }
 
@@ -239,14 +313,20 @@
       margin-top: 25px;
     }
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact-box {
       max-width: 850px;
     }
 
     .contact-email {
       font-size: clamp(28px, 5vw, 60px);
+
       letter-spacing: -0.05em;
+
       word-break: break-word;
     }
 
@@ -254,20 +334,36 @@
       opacity: 0.65;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       padding: 40px 7%;
+
       border-top: 1px solid rgba(255,255,255,0.08);
+
       color: #666;
+
       font-size: 13px;
+
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
+
       flex-wrap: wrap;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 700px) {
+
       nav {
         padding: 0 5%;
       }
@@ -298,25 +394,50 @@
         margin-top: 15px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <nav>
-    <a href="#" class="logo">HE</a>
+
+    <a href="#" class="logo">
+      HE
+    </a>
 
     <div class="nav-links">
-      <a href="#works">Works</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#works">
+        Works
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </div>
+
   </nav>
 
 
-  <!-- HERO -->
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
   <header class="hero">
+
     <div class="hero-content">
 
       <div class="hero-label">
@@ -333,6 +454,7 @@
       </div>
 
       <div class="hero-buttons">
+
         <a href="#works" class="button">
           Explore Works
         </a>
@@ -340,13 +462,19 @@
         <a href="#contact" class="button">
           Contact
         </a>
+
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- WORKS -->
+
+  <!-- =========================
+       WORKS
+  ========================= -->
+
   <section id="works">
 
     <div class="section-label">
@@ -358,15 +486,22 @@
     </h2>
 
 
-    <!-- RESET -->
+
+    <!-- =========================
+         RESET
+    ========================= -->
+
     <article class="film-project">
+
 
       <div class="film-project-header">
 
         <div>
+
           <h3 class="film-project-title">
             RESET
           </h3>
+
         </div>
 
         <div class="film-project-category">
@@ -376,19 +511,28 @@
       </div>
 
 
-      <!-- VIDEO -->
-      <div class="video-placeholder">
-        <span>
-          Film video will be added here.
-          <br><br>
-          You can replace this area with an embedded
-          YouTube video when the video is available.
-        </span>
+
+      <!-- FILM VIDEO -->
+
+      <div class="video-container">
+
+        <iframe
+          src="https://www.youtube.com/embed/Hjd9MoA76io"
+          title="RESET — Film Music by Hiroto Ejima"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
       </div>
 
 
+
       <!-- PROJECT INFORMATION -->
+
       <div class="project-grid">
+
+
+        <!-- ROLE -->
 
         <div class="project-card">
 
@@ -405,6 +549,9 @@
         </div>
 
 
+
+        <!-- MUSIC -->
+
         <div class="project-card">
 
           <h3>
@@ -412,37 +559,47 @@
           </h3>
 
           <div class="audio-placeholder">
-            Audio player will be added here.
-            Replace this area with your music file.
+            Original score audio will be added here.
           </div>
 
         </div>
 
+
       </div>
 
 
-      <!-- DESCRIPTION -->
-      <div class="project-card" style="margin-top: 30px;">
+
+      <!-- PROJECT DESCRIPTION -->
+
+      <div
+        class="project-card"
+        style="margin-top: 30px;"
+      >
 
         <h3>
           About the Music
         </h3>
 
         <p>
-          Original music created for RESET.
-          The score was developed to support the film's
-          atmosphere, emotional progression, and narrative
-          through music.
+          RESET is a student short film created through a
+          Sony Pictures–affiliated high school film program.
+          I composed the original score to support the film's
+          atmosphere, narrative, and emotional development.
         </p>
 
       </div>
+
 
     </article>
 
   </section>
 
 
-  <!-- ABOUT -->
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
   <section id="about">
 
     <div class="section-label">
@@ -452,6 +609,7 @@
     <h2>
       About
     </h2>
+
 
     <div class="about-content">
 
@@ -475,7 +633,11 @@
   </section>
 
 
-  <!-- CONTACT -->
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
   <section id="contact">
 
     <div class="section-label">
@@ -485,6 +647,7 @@
     <h2>
       Let's Work Together
     </h2>
+
 
     <div class="contact-box">
 
@@ -500,7 +663,11 @@
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
     <div>
@@ -512,6 +679,7 @@
     </div>
 
   </footer>
+
 
 </body>
 </html>
