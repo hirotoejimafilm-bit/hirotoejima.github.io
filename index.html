@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hiroto Ejima — Immersive Audio</title>
+  <meta name="description" content="Hiroto Ejima — Immersive Audio, Spatial Audio, Music Production and Music Direction.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #070709;
+      color: #f5f5f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      background: rgba(7, 7, 9, 0.75);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #b8b8c0;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(
+        circle,
+        rgba(90, 70, 255, 0.18),
+        rgba(20, 160, 255, 0.08),
+        transparent 65%
+      );
+      top: -250px;
+      right: -200px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: #8e8e9a;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 9vw, 120px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      margin-bottom: 28px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        100deg,
+        #ffffff,
+        #b8b5ff,
+        #8de7ff
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      font-size: 20px;
+      color: #aaaab4;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 13px 22px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.05);
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .button:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      background: white;
+      color: black;
+      border-color: white;
+    }
+
+    .button.primary:hover {
+      background: #dddddd;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 120px 8%;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .section-label {
+      font-size: 12px;
+      color: #777783;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: clamp(35px, 5vw, 65px);
+      letter-spacing: -2px;
+      margin-bottom: 55px;
+    }
+
+    /* WORKS */
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .work-card {
+      min-height: 280px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+      padding: 32px;
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.015)
+      );
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(150,150,255,0.35);
+    }
+
+    .work-number {
+      font-size: 12px;
+      color: #777783;
+      letter-spacing: 2px;
+    }
+
+    .work-card h3 {
+      font-size: 28px;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    .work-card p {
+      color: #9999a3;
+      font-size: 15px;
+    }
+
+    .work-type {
+      margin-top: 25px;
+      color: #c4c4cc;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      max-width: 1100px;
+    }
+
+    .about-container p {
+      color: #aaaab4;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-content: flex-start;
+    }
+
+    .skill {
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 15px;
+      border-radius: 30px;
+      color: #bdbdc6;
+      font-size: 13px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      max-width: 900px;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 25px;
+    }
+
+    .contact-box p {
+      color: #9999a3;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: clamp(20px, 4vw, 38px);
+      border-bottom: 1px solid #555;
+      padding-bottom: 8px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-email:hover {
+      border-color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 8%;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      justify-content: space-between;
+      color: #666670;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      section {
+        padding: 90px 6%;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">HE</div>
+
+    <div class="nav-links">
+      <a href="#works">Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Immersive Audio / Spatial Audio / Music
+      </div>
+
+      <h1>
+        HIROTO<br>
+        <span class="gradient-text">EJIMA</span>
+      </h1>
+
+      <p class="hero-description">
+        Exploring how sound can exist beyond the left and right.
+        Focused on immersive audio, spatial audio, music production,
+        and new ways of experiencing sound.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button primary" href="#works">
+          Explore Works
+        </a>
+
+        <a class="button" href="#contact">
+          Contact
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- WORKS -->
+
+  <section id="works">
+
+    <div class="section-label">
+      01 / Selected Works
+    </div>
+
+    <h2>Selected Works</h2>
+
+    <div class="works-grid">
+
+      <a class="work-card" href="#" target="_blank">
+
+        <div class="work-number">
+          001
+        </div>
+
+        <div>
+          <h3>Spatial Audio</h3>
+
+          <p>
+            An exploration of immersive sound and three-dimensional
+            audio using spatial placement techniques.
+          </p>
+
+          <div class="work-type">
+            Immersive Audio
+          </div>
+        </div>
+
+      </a>
+
+
+      <a class="work-card" href="#" target="_blank">
+
+        <div class="work-number">
+          002
+        </div>
+
+        <div>
+          <h3>Film Music</h3>
+
+          <p>
+            Original music created for visual storytelling,
+            atmosphere, tension, and emotional development.
+          </p>
+
+          <div class="work-type">
+            Composition
+          </div>
+        </div>
+
+      </a>
+
+
+      <a class="work-card" href="#" target="_blank">
+
+        <div class="work-number">
+          003
+        </div>
+
+        <div>
+          <h3>Music Direction</h3>
+
+          <p>
+            Developing musical concepts and shaping how music
+            interacts with visual media.
+          </p>
+
+          <div class="work-type">
+            Music Direction
+          </div>
+        </div>
+
+      </a>
+
+
+      <a class="work-card" href="#" target="_blank">
+
+        <div class="work-number">
+          004
+        </div>
+
+        <div>
+          <h3>Experiments</h3>
+
+          <p>
+            Independent experiments exploring sound, technology,
+            spatial perception, and new audio experiences.
+          </p>
+
+          <div class="work-type">
+            Audio Research
+          </div>
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-label">
+      02 / About
+    </div>
+
+    <h2>About</h2>
+
+    <div class="about-container">
+
+      <div>
+
+        <p>
+          I am Hiroto Ejima, a Japanese student and audio creator
+          based in the United States.
+        </p>
+
+        <p>
+          My primary interest is immersive and spatial audio —
+          exploring how sound can be positioned, experienced,
+          and designed in three-dimensional space.
+        </p>
+
+        <p>
+          I also work with music composition, music direction,
+          and audio production for visual projects.
+        </p>
+
+      </div>
+
+
+      <div class="skills">
+
+        <div class="skill">
+          Immersive Audio
+        </div>
+
+        <div class="skill">
+          Spatial Audio
+        </div>
+
+        <div class="skill">
+          Music Production
+        </div>
+
+        <div class="skill">
+          Music Direction
+        </div>
+
+        <div class="skill">
+          Film Music
+        </div>
+
+        <div class="skill">
+          Logic Pro
+        </div>
+
+        <div class="skill">
+          GarageBand
+        </div>
+
+        <div class="skill">
+          Soundtrap
+        </div>
+
+        <div class="skill">
+          Japanese
+        </div>
+
+        <div class="skill">
+          English
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="section-label">
+      03 / Contact
+    </div>
+
+    <div class="contact-box">
+
+      <h2>Let's create<br>something new.</h2>
+
+      <p>
+        For collaborations, music, immersive audio,
+        spatial audio projects, or other audio-related work,
+        feel free to get in touch.
+      </p>
+
+      <a
+        class="contact-email"
+        href="mailto:hirotoejimafilm@gmail.com"
+      >
+        hirotoejimafilm@gmail.com
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+      © 2026 Hiroto Ejima
+    </div>
+
+    <div>
+      Immersive Audio / Spatial Audio
+    </div>
+
+  </footer>
+
+</body>
+</html>
